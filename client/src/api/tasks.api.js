@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../../../server/config";
+import { API_URL } from "../../../server/config.js";
 
 export const getTasksRequest = async () => await axios.get(`${API_URL}/tasks`);
 
@@ -7,7 +7,7 @@ export const createTaskRequest = async (task) =>
   await axios.post(`${API_URL}/tasks`, task);
 
 export const deleteTaskRequest = async (id) =>
-  await axios.delete(`${API_URL}/${id}`);
+  await axios.delete(`${API_URL}/tasks/${id}`);
 
 export const getTaskRequest = async (id) =>
   await axios.get(`${API_URL}/tasks/${id}`);
